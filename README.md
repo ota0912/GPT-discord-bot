@@ -1,6 +1,6 @@
 <div align="center">
 
-# GPT-discord
+# GPT Discord Bot
 A discord chatbot powered by Openai's GPT-3, with several other features!
 
 </div>
