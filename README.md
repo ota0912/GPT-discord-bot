@@ -24,6 +24,13 @@ A discord chatbot powered by Openai's GPT-3, with several other features ready t
 - Paste your `bot token` and `openai api key` in the .env file
 - Run `bot.py` or `bot_slash.py` and the bot should be online
 
+# Features
+- Chatbot command to interact with GPT-3 engines directly
+- Post a random hand curated doujin
+- Webscrape websites for NSFW gifs
+- Post a random image from the img dataset provided
+
+
 # Additional Tweaks
 <!--
 - To enable tts, you'll have to manually install ffmpeg by following [this](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/) tutorial 
