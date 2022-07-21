@@ -1,13 +1,15 @@
 <div align="center">
 
 # GPT Discord Bot
+  
+
+<a href="https://github.com/ota0912/GPT-discord-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/ota0912/GPT-discord-bot?color=green&style=flat-square"></a>
+<a href="https://github.com/ota0912/GPT-discord-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/ota0912/GPT-discord-bot?color=green&style=flat-square"></a>
+  
 A discord chatbot powered by Openai's GPT-3, with several other features ready to be deployed through heroku!
 
 <img src="https://raw.githubusercontent.com/ota0912/GPT-discord-bot/main/media/discord.png" height="80"/> 
 <img src="https://raw.githubusercontent.com/ota0912/GPT-discord-bot/main/media/gpt3.png" height="80"/>
-  
-<a href="https://github.com/ota0912/GPT-discord-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/ota0912/GPT-discord-bot?color=red&style=flat-square"></a>
-<a href="https://github.com/ota0912/GPT-discord-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/ota0912/GPT-discord-bot?color=green&style=flat-square"></a>
 
 </div>
 
