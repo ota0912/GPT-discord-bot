@@ -3,7 +3,7 @@
 # GPT Discord Bot
 A discord chatbot powered by Openai's GPT-3, with several other features ready to be deployed through heroku!
 
-<img src="https://raw.githubusercontent.com/ota0912/GPT-discord-bot/main/media/discord.png" align="center"/>
+<img src="https://raw.githubusercontent.com/ota0912/GPT-discord-bot/main/media/discord.png" height="40" align="center"/> <img src="https://raw.githubusercontent.com/ota0912/GPT-discord-bot/main/media/gpt3.png" height="40" align="center"/>
 
 </div>
 
