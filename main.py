@@ -60,5 +60,8 @@ def scraper(url_link = "https://www.google.com/search?q=ahegao&rlz=1C1YQLS_enIN9
 
 #uses the ahegao dataset to get images
 async def getImg(fp = 'danbooru2020-ahegao-handpicked-cropped'):
-    a = list(os.listdir(fp))
+    try:
+      a = list(os.listdir(fp))
+    except:
+      print(f"dataset doesn't exist! Create a folder named {fp} and add in the images you want to be fetched")
     return fp+"/"+a[random.randint(0, len(a))]
