@@ -13,7 +13,7 @@ A discord chatbot powered by Openai's GPT-3, with several other features ready t
 - The bot can also respond to you messages in a Voice Chat by using ffmpeg and Google TTS
 - Can perform tts for those awkard moments when you just can't get your microphone to work
   
-## Installation
+# Installation
 
 - Run the command to install all the dependencies
   ```
@@ -24,7 +24,7 @@ A discord chatbot powered by Openai's GPT-3, with several other features ready t
 - Paste your `bot token` and `openai api key` in the .env file
 - Run `bot.py` or `bot_slash.py` and the bot should be online
 
-## Additional Tweaks
+# Additional Tweaks
 <!--
 - To enable tts, you'll have to manually install ffmpeg by following [this](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/) tutorial 
 -->
