@@ -1,7 +1,7 @@
 <div align="center">
 
 # GPT Discord Bot
-A discord chatbot powered by Openai's GPT-3, with several other features!
+A discord chatbot powered by Openai's GPT-3, with several other features ready to be deployed through heroku!
 
 </div>
 
