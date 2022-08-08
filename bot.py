@@ -1,5 +1,4 @@
 #Importing Modules
-#Hello krif I am madly in love with your horse cock please suck me off
 import discord
 from discord.ext import commands
 import random
@@ -7,6 +6,7 @@ import os
 from dotenv import load_dotenv
 from gtts import gTTS
 import ffmpeg
+
 #Importing useful functions from main.py
 from main import ask, scraper, getImg
 
@@ -171,6 +171,7 @@ class porn(commands.Cog):
                 await ctx.send(hyperlink)
         else:
             await ctx.send("You can only use this command in NSFW channels!")
+            
 class tts(commands.Cog):
     bots = commands.Bot(command_prefix=['tts'], help_command=None)
     def __init__(self, bot):
@@ -213,6 +214,7 @@ class tts(commands.Cog):
                 vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='C:/ffmpeg/bin/ffmpeg.exe'))
             except:
                 answer = "YOUR MOTHER"
+                
 class vc(commands.Cog):
     bots = commands.Bot(command_prefix=['vc '], help_command=None)
 
@@ -266,7 +268,6 @@ class vc(commands.Cog):
                 answer = "YOUR MOTHER"
                 continue
             ms_cont1 = msg_cont
-            #await channel.delete()
 
 bots.add_cog(help(bots))
 bots.add_cog(sexting(bots))
