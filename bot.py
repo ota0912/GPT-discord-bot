@@ -5,7 +5,8 @@ from discord.ext import commands
 import random
 import os
 from dotenv import load_dotenv
-
+from gtts import gTTS
+import ffmpeg
 #Importing useful functions from main.py
 from main import ask, scraper, getImg
 
@@ -170,10 +171,107 @@ class porn(commands.Cog):
                 await ctx.send(hyperlink)
         else:
             await ctx.send("You can only use this command in NSFW channels!")
+class tts(commands.Cog):
+    bots = commands.Bot(command_prefix=['tts'], help_command=None)
+    def __init__(self, bot):
+        self.bot = bot
 
+    @bots.command(name = 'tts')
+    async def tts(self,ctx):
+        global vc
+        channel = ctx.message.channel
+        answer = 0
+        msg_cont1 = ""
+        voicechannel = discord.utils.get(ctx.guild.channels, name='General')
+        try:
+         vc = await voicechannel.connect()
+        except:
+            vc
+        while True:
+
+            f = 0
+
+            def check(m):
+                return m.author == ctx.author
+
+            try:
+                msg = await bots.wait_for('message', timeout=120.0, check=check)
+                msg_cont = msg.content
+            except:
+                f = 1
+
+            a = msg_cont == 'end'
+            b = f == 1
+
+            if a or b:
+                await channel.send('tts disconnected due to inactivity')
+                break
+
+            try:
+                output = gTTS(text=msg_cont, lang="en", tld="co.in")
+                output.save(f"tts.mp3")
+                vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='C:/ffmpeg/bin/ffmpeg.exe'))
+            except:
+                answer = "YOUR MOTHER"
+class vc(commands.Cog):
+    bots = commands.Bot(command_prefix=['vc '], help_command=None)
+
+    def __init__(self, bot):
+        self.bot = bot
+
+
+    @bots.command(name= 'vc')
+    async def vc(self, ctx):
+        global vc
+        channel=ctx.message.channel
+        answer = 0
+        msg_cont1 = ""
+        a = 'General'
+        voicechannel = discord.utils.get(ctx.guild.channels, name=a)
+        if ! voicechannel :
+
+        try:
+            vc = await voicechannel.connect()
+        except:
+            vc
+        output = gTTS(text='sup chamaar', lang="en", tld="co.in")
+        output.save(f"tts.mp3")
+        vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='C:/ffmpeg/bin/ffmpeg.exe'))
+        while True:
+
+            f = 0
+
+            def check(m):
+                return m.author == ctx.author
+
+            try:
+                msg = await bots.wait_for('message', timeout=120.0, check=check)
+                msg_cont = msg.content
+            except:
+                f = 1
+
+            a = msg_cont == 'end'
+            b = f == 1
+
+            if a or b:
+                await channel.send('bbye baby <3 UwU')
+                break
+
+            try:
+                answer = ask(msg_cont)
+                output = gTTS(text=answer, lang="en", tld="co.in")
+                output.save(f"tts.mp3")
+                vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='C:/ffmpeg/bin/ffmpeg.exe'))
+            except:
+                answer = "YOUR MOTHER"
+                continue
+            ms_cont1 = msg_cont
+            #await channel.delete()
 
 bots.add_cog(help(bots))
 bots.add_cog(sexting(bots))
 bots.add_cog(Media(bots))
 bots.add_cog(porn(bots))
+bots.add_cog(tts(bots))
+bots.add_cog(vc(bots))
 bots.run(TOKEN)
