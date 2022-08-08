@@ -29,12 +29,11 @@ A discord chatbot powered by Openai's GPT-3, with several other features ready t
 - Post a random hand curated doujin
 - Webscrape websites for NSFW gifs
 - Post a random image from the img dataset provided
-
+- Use tts commands and actively interact with the bot in a vc
 
 # Additional Tweaks
-<!--
-- To enable tts, you'll have to manually install ffmpeg by following [this](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/) tutorial 
--->
+
+- To enable tts and vc commands, you'll have to manually install ffmpeg by following [this](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/) tutorial 
 - To use a custom GPT-3 engine, edit the variable in line 32 of [main.py](main.py). Replace the existing value with a model name from [here](https://beta.openai.com/docs/models/gpt-3)
 - To create a custom fine tuned GPT-3 model, refer to [this](https://beta.openai.com/docs/guides/fine-tuning) guide. Then comment line 32 and uncomment line 33 after replacing the value of variable `model` with the name of your custom model in [main.py](main.py)
 
