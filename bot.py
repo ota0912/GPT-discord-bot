@@ -1,4 +1,5 @@
 #Importing Modules
+from importlib.resources import path
 import discord
 from discord.ext import commands
 import random
@@ -171,6 +172,7 @@ class porn(commands.Cog):
         else:
             await ctx.send("You can only use this command in NSFW channels!")
 
+#tts command
 class tts(commands.Cog):
 
     bots = commands.Bot(command_prefix=['tts'], help_command=None)
@@ -183,7 +185,7 @@ class tts(commands.Cog):
         channel = ctx.message.channel
         
         voicechannel = ctx.author.voice.channel
-        
+
         try:
             vc = await voicechannel.connect()
         except:
@@ -202,7 +204,7 @@ class tts(commands.Cog):
             except:
                 f = 1
 
-            a = msg_cont == 'end'
+            a = msg_cont.lower() == 'end'
             b = f == 1
 
             if a or b:
@@ -213,10 +215,11 @@ class tts(commands.Cog):
             try:
                 output = gTTS(text=msg_cont, lang="en", tld="co.in")
                 output.save(f"tts.mp3")
-                vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='ffmpeg/bin/ffmpeg.exe'))
+                vc.play(discord.FFmpegPCMAudio(source="tts.mp3"))
             except:
                 continue    
-                
+
+#vc command
 class vc(commands.Cog):
     bots = commands.Bot(command_prefix=['vc '], help_command=None)
 
@@ -239,10 +242,9 @@ class vc(commands.Cog):
 
         greetings=['Heyaa!', "Hi babyy!", "Hewoo!", "Hey hottie!"]
         greet=random.choice(greetings)
-
         output = gTTS(text=greet, lang="en", tld="co.in")
         output.save(f"tts.mp3")
-        vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='ffmpeg/bin/ffmpeg.exe'))
+        vc.play(discord.FFmpegPCMAudio(source="tts.mp3"))
 
         while True:
 
@@ -257,7 +259,7 @@ class vc(commands.Cog):
             except:
                 f = 1
 
-            a = msg_cont == 'end'
+            a = msg_cont.lower() == 'end'
             b = f == 1
 
             if a or b:
@@ -271,7 +273,7 @@ class vc(commands.Cog):
                 answer = ask(msg_cont)
                 output = gTTS(text=answer, lang="en", tld="co.in")
                 output.save(f"tts.mp3")
-                vc.play(discord.FFmpegPCMAudio(source="tts.mp3", executable='ffmpeg/bin/ffmpeg.exe'))
+                vc.play(discord.FFmpegPCMAudio(source="tts.mp3"))
             except:
                 answer = "weird"
                 continue
