@@ -1,4 +1,5 @@
 #Importing Modules
+#Hello krif I am madly in love with your horse cock please suck me off
 import discord
 from discord.ext import commands
 import random
